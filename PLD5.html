@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLD5 by Aziz</title>
+  <link rel="stylesheet" href="PLD5.css" />
+</head>
+<main>
+<body>
+
+    <section class="hero">
+    <header class="header">
+        <div class="logo">
+            <img src="https://i.postimg.cc/SNsQGnZX/image.png" alt="Logo" />
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="navigation" id="nav">
+            <nav>
+                <a href="#"><span>About</span></a>
+                <a href="#"><span>Services</span></a>
+                <a href="#"><span>Contacts</span></a>
+            </nav>
+        </div>
+    </header>
+    <div class="title">
+    <h1>
+        Unleash the Power of Possibility
+    </h1>
+    
+    </div>
+
+    <div class="sub">
+        <h2>The Future Isn’t Coming — It’s Here.</h2>
+    </div>
+
+    <div class="btn">
+        <button>
+            Call-to-action
+        </button>
+    </div>
+    </section>
+
+    <section class="features">
+        <div class="boxes">
+            <div class="box">
+                <h1>🤖 AI-Powered Performance</h1>
+                <h2>Leverage advanced AI algorithms that optimize every process in real-time, boosting speed and efficiency for gaming, design, and data tasks.</h2>
+
+            </div>
+
+            <div class="box">
+                <h1>💡 Real-Time Ray Tracing</h1>
+                <h2>Enjoy stunningly realistic visuals with real-time ray tracing technology that simulates natural light and shadows flawlessly.</h2>
+
+            </div>
+
+            <div class="box">
+                <h1>⚡ Ultra-Low Latency</h1>
+                <h2>Experience lightning-fast response times to keep you ahead in competitive gaming and precision-demanding applications.</h2>
+
+            </div>
+
+            <div class="box">
+                <h1>🌿 Energy Efficient Architecture</h1>
+                <h2>Built with cutting-edge energy-saving technology to maximize performance while minimizing power consumption and heat.</h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+   <section class="form" aria-labelledby="contact-heading">
+  <div class="form-div">
+    <h1 id="contact-heading">Contact Us</h1>
+
+    <form class="form-sec" id="contact-form" novalidate>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required aria-required="true" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required aria-required="true" />
+      </div>
+
+      <div class="form-group">
+        <label for="text" class="message-text">Message:</label>
+        <textarea id="text" name="text" rows="5" required aria-required="true"></textarea>
+      </div>
+      <div class="btn2">
+      <button type="submit" class="submit-btn">Send</button>
+      <p id="success-msg" class="success-msg" role="alert" hidden>✅ Your message has been sent!</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<hr class="separator" />
+
+</main>
+
+<footer class="footer">
+  <div class="footer-left">
+    <p> Copyright &copy; 2025 NVIDIA Corporation</p>
+  </div>
+  <div class="footer-right">
+    <a href="#" aria-label="Facebook"><img src="https://i.postimg.cc/WbNKVVKY/Facebook-White.png" alt="Facebook" /></a>
+    <a href="#" aria-label="Instagram"><img src="https://i.postimg.cc/hvSCK8CQ/Instagram-White.png" alt="Instagram" /></a>
+    <a href="#" aria-label="LinkedIn"><img src="https://i.postimg.cc/cLj5fnJP/Twitter-White.png" alt="Twitter" /></a>
+  </div>
+</footer>
+
+
+
+    <script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.getElementById('nav');
+
+  hamburger.addEventListener('click', () => {
+    nav.classList.toggle('nav-active');
+    hamburger.classList.toggle('toggle');
+  });
+
+  // Contact form validation
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('success-msg');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const text = form.text.value.trim();
+
+    if (name && email && text) {
+      successMsg.hidden = false;
+      form.reset();
+    } else {
+      alert("Please fill out all fields correctly.");
+    }
+  });
+</script>
+
+</body>
+</html>
